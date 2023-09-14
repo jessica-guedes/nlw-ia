@@ -22,3 +22,17 @@ POST http://localhost:3333/videos/5a38c3f8-df62-416b-9b4e-33529cc9218a/transcrip
 Content-Type: application/json
 
 {"prompt": "alternative, music, pop"}
+
+###
+
+# @name generate-ai-completion
+
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "5a38c3f8-df62-416b-9b4e-33529cc9218a", 
+    "temperature": 0.5,
+    "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
+
+}
